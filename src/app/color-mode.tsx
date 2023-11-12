@@ -3,7 +3,6 @@ import { useState, useEffect, useCallback } from 'react'
 import { Moon, Sun } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { css } from '../../styled-system/css'
 
 const isServer = typeof window === 'undefined'
 const STORAGE_KEY = 'color-mode-key'
@@ -52,8 +51,9 @@ export const ColorMode: React.FC<ColorModeProps> = ({
   }, [setModeState])
 
   const applyMode = useCallback((nextMode: string) => {
-    document.documentElement.setAttribute(attribute, nextMode)
-  }, [attribute])
+    console.log(nextMode, 'mode')
+    document.documentElement.className = nextMode
+  }, [])
 
 
   const setMode = useCallback((nextMode: string) => {
@@ -67,10 +67,7 @@ export const ColorMode: React.FC<ColorModeProps> = ({
 
 
   return (
-    <Button className={css({
-      width: '24px',
-      height: '24px',
-    })} onClick={() =>  setMode(mode === 'dark' ? 'light' : 'dark')}>
+    <Button className="w-6 h-6" onClick={() =>  setMode(mode === 'dark' ? 'light' : 'dark')}>
       {mounted ? mode === 'light' ? <Sun /> : <Moon /> : <Sun /> }
     </Button>
   )

@@ -4,11 +4,8 @@ import "prismjs/themes/prism-tomorrow.css";
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
-import { css } from '../../styled-system/css'
-import { styled } from '../../styled-system/jsx'
-
-import { hstack } from '../../styled-system/patterns'
 import { Button } from '@/components/ui/button'
+
 import { ColorMode } from './color-mode'
 import { ColorModeScript } from './color-mode-script'
 const inter = Inter({ subsets: ['latin'] })
@@ -44,30 +41,14 @@ export default function RootLayout({
         <ColorModeScript attribute='data-color-mode' />
       </head>
       <body className={inter.className}>
-        <header className={css({
-          backgroundColor: 'background'
-        })}>
-          <div className={hstack({
-            py: 'md',
-            maxWidth: '700px',
-            justifyContent: 'space-between',
-            margin: 'auto',
-          })}>
-            <h1>Jason Bratt</h1>
+        <header className="bg-primary">
+          <div className="py-4 max-w-3xl flex justify-between m-auto">
+            <h1 className="text-primary">Jason Bratt</h1>
             <nav>
-              <ul className={css({
-                display: 'flex',
-                listStyle: 'none',
-                p: 0,
-                m: 0,
-                gap: '1.5rem',
-              })}>
+              <ul className="flex list-none p-0 m-0 gap-6">
                 {navPages.map((page, i) => (
                   <li key={i}>
-                    <Link href={page.href} className={css({
-                      py: 'xsm',
-                      px: 'sm'
-                    })}>{page.title}</Link>
+                    <Link href={page.href} className="py-1 px-2 text-primary">{page.title}</Link>
                   </li>
                 ))}
               </ul>

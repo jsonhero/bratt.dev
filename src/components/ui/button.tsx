@@ -1,24 +1,18 @@
-import { cva } from '../../../styled-system/css'
-import { styled } from '../../../styled-system/jsx'
+import { clsx } from 'clsx';
+import { HTMLProps } from 'react';
 
-const buttonStyle = cva({
-  base: {
-    display: 'flex',
-    color: 'text.paragraph',
-    _hover: {
-      cursor: 'pointer',
-    },
-  },
-  variants: {
-    visual: {
-      ghost: { color: 'black' },
-      outline: { borderWidth: '1px', borderColor: 'red.200' }
-    },
-    size: {
-      sm: { padding: '4', fontSize: '12px' },
-      lg: { padding: '8', fontSize: '24px' }
-    }
-  }
-})
+interface ButtonProps extends HTMLProps<HTMLButtonElement> {
+  className?: string;
+}
 
-export const Button = styled('button', buttonStyle)
+export const Button: React.FC<ButtonProps> = ({
+  className,
+  children,
+  ...props
+}) => {
+  return (
+    <button className={clsx("text-primary", className)} {...props}>
+      {children}
+    </button>
+  )
+}

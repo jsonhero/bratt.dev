@@ -21,11 +21,9 @@ export const ColorModeScript = React.memo(
         } else {
           colorMode = selected;
         }
-        var el = window.document.querySelector('html');
-        el.setAttribute('${attribute}', colorMode);
+        window.document.documentElement.className = colorMode
       }()`
     })()
-
 
     return <script dangerouslySetInnerHTML={{ __html: scriptSrc }} />
   },

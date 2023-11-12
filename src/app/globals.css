@@ -1,2 +1,5 @@
-@layer reset, base, tokens, recipes, utilities;
-
+@import "@radix-ui/colors/sand.css";
+@import "@radix-ui/colors/sand-dark.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
