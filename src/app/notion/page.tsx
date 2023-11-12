@@ -1,4 +1,4 @@
-import { getBlogPage } from './notion'
+import { getBlogPage } from '../../utils/notion'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
 import { NotionPrism } from './prism'

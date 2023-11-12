@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { Button } from '@/components/ui/button'
+import { clsx } from 'clsx';
 
 import { ColorMode } from './color-mode'
 import { ColorModeScript } from './color-mode-script'
@@ -40,15 +41,15 @@ export default function RootLayout({
       <head>
         <ColorModeScript attribute='data-color-mode' />
       </head>
-      <body className={inter.className}>
-        <header className="bg-primary">
+      <body className={clsx(inter.className, "gradient-container  bg-primary text-primary transition-colors")}>
+        <header className="sticky">
           <div className="py-4 max-w-3xl flex justify-between m-auto">
-            <h1 className="text-primary">Jason Bratt</h1>
+            <h1>Jason Bratt</h1>
             <nav>
               <ul className="flex list-none p-0 m-0 gap-6">
                 {navPages.map((page, i) => (
                   <li key={i}>
-                    <Link href={page.href} className="py-1 px-2 text-primary">{page.title}</Link>
+                    <Link href={page.href} className="py-1 px-2">{page.title}</Link>
                   </li>
                 ))}
               </ul>
@@ -58,7 +59,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        {children}
+        <main className="max-w-3xl mx-auto pt-16">{children}</main>
       </body>
     </html>
   )

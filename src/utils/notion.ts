@@ -17,3 +17,11 @@ export const getBlogPage = React.cache(async () => {
   const md = await n2m.blocksToMarkdown(blocks.results)
   return n2m.toMarkdownString(md)
 })
+
+export const getBlogPages = React.cache(async () => {  
+  const blogDatabase = await notion.databases.query({
+    database_id: 'e85b3f510627475c927ef14c29ab2bce'
+  })
+
+  return blogDatabase
+})

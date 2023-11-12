@@ -9,10 +9,12 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        primary: 'var(--sand-11)'
+        primary: 'var(--sand-12)',
+        secondary: 'var(--sand-11)',
       },
       backgroundColor: {
         primary: "var(--sand-2)",
+        secondary: "var(--sand-3)",
       },
     },
   },
