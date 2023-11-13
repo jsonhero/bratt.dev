@@ -10,9 +10,18 @@ export const notion = new Client({
 
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-export const getBlogPage = React.cache(async () => {  
+
+export const getPage = React.cache(async (pageId: string) => {
+  const page = await notion.pages.retrieve({
+    page_id: pageId,
+  })
+
+  return page
+})
+
+export const getPageMd = React.cache(async (pageId: string) => {  
   const blocks = await notion.blocks.children.list({
-    block_id: '36e0fb6fd62f4daa89f8bfb4548da564',
+    block_id: pageId,
   })
   const md = await n2m.blocksToMarkdown(blocks.results)
   return n2m.toMarkdownString(md)
