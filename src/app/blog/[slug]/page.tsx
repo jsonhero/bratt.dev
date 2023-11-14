@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </h2>
         <p className="text-secondary">
           {/* @ts-ignore */}
-        {DateTime.fromISO(page?.created_time).toLocal().toFormat('LLL dd, yyyy')}
+          {DateTime.fromISO(page?.created_time).toLocal().toFormat('LLL dd, yyyy')}
         </p>
       </div>
       <div className="h-8" />

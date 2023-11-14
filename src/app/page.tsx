@@ -12,7 +12,7 @@ const socials = [
     Icon: ScrollIcon,
     text: 'Resume',
     href: '/resume.pdf'
-  }
+  },
 ]
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
             {socials.map((social, i) => (
               <li key={i}>
                 <a href={social.href} target="none" rel="noopener noreferrer">
-                  <div className="flex items-center p-3 border border-primary rounded-lg gap-3">
+                  <div className="flex items-center py-2 px-3 border border-primary rounded-lg gap-3">
                     <social.Icon />
                     {social.text}
                   </div>

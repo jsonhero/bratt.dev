@@ -26,12 +26,8 @@ const navPages = [
     href: '/blog',
   },
   {
-    title: 'about',
-    href: '/',
-  },
-  {
     title: 'now',
-    href: '/',
+    href: '/now',
   },
 ]
 
@@ -45,7 +41,7 @@ export default function RootLayout({
       <head>
         <ColorModeScript attribute='data-color-mode' />
       </head>
-      <body className={clsx(inter.className, "gradient-container  bg-primary text-primary transition-colors")}>
+      <body className={clsx(inter.className, "gradient-container  bg-primary text-primary transition-colors duration-500")}>
         <header className="sticky top-0 z-20 bg-tertiary">
           <div className="py-4 max-w-3xl flex justify-between m-auto">
             <Link href="/">
