@@ -1,6 +1,8 @@
 
 import Image from 'next/image'
 import { GithubIcon, ScrollIcon } from 'lucide-react'
+import { allProjects } from '../../.contentlayer/generated'
+import Link from 'next/link'
 
 const socials = [
   {
@@ -40,6 +42,18 @@ export default function Home() {
             ))}
           </ul>
         </div>
+      </div>
+      <div className="h-7"></div>
+      <div>
+        <ul className="flex list-none p-0 m-0 gap-6">
+          {allProjects.map((project, key) => (
+            <li key={project._id} className="border border-blue-300 p-10">
+              <Link href={`/project/${project.slug}`}>
+                {project.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )

@@ -1,23 +1,19 @@
-import { getBlogPages } from '@/utils/notion'
 import { DateTime } from 'luxon'
 import Link from 'next/link'
+import { allBlogs } from '@generated-content'
 
 export default async function Notion() {
-  const blogPages = await getBlogPages()
-
   return (
     <div>
       <ul>
-        {blogPages.results.map((blogPage) => {
+        {allBlogs.map((blog) => {
           return (
-            <li key={blogPage.id} className="flex gap-12 items-center py-3">
+            <li key={blog._id} className="flex gap-12 items-center py-3">
               <div className="text-secondary">
-                {/* @ts-ignore */}
-                {DateTime.fromISO(blogPage.created_time).toLocal().toFormat('LLL dd, yyyy')}
+                {DateTime.fromISO(blog.publishedAt).toLocal().toFormat('LLL dd, yyyy')}
               </div>
-              <Link className="font-bold" href={`/blog/${blogPage.id}`}>
-                {/* @ts-ignore */}
-                {blogPage.properties?.Name.title[0]?.plain_text}
+              <Link className="font-bold" href={`/blog/${blog.slug}`}>
+                {blog.title}
               </Link>
             </li>
           )
