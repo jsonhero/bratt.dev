@@ -1,3 +1,3 @@
 WIP.
 
-My soon to be personal website - bratt.dev
+My personal website. https://www.bratt.dev
