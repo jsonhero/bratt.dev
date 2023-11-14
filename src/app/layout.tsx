@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <ColorModeScript attribute='data-color-mode' />
       </head>
-      <body className={clsx(inter.className, "gradient-container bg-primary text-primary")}>
+      <body className={clsx(inter.className, "text-primary radial-site-bg h-screen")}>
         <header className="sticky top-0 z-20 bg-primaryD">
           <div className="max-w-3xl flex justify-between m-auto items-center px-6 py-4">
             <Link href="/" className="sm:inline hidden" >

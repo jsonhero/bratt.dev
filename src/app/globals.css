@@ -17,3 +17,11 @@
   --tw-prose-code: var(--sand-12);
   --tw-prose-quotes: var(--sand-11);
 }
+
+.radial-site-bg {
+  background: radial-gradient(circle, var(--sand-3) 0%, var(--sand-2) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

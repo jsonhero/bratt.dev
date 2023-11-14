@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const blog = await getPageMd(params.slug)
 
   return (
-    <div>
+    <div className="pb-24">
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl font-semibold">
           {/* @ts-ignore */}
