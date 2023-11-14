@@ -14,7 +14,6 @@ export const ColorModeScript = React.memo(
     const scriptSrc = (() => {
       return `!function() {
         var selected = window.localStorage.getItem('${STORAGE_KEY}');
-        console.log(selected, 'selected');
         var colorMode;
         if (!selected) {
           colorMode = window.matchMedia('${MEDIA}').matches ? 'dark' : 'light';

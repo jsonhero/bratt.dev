@@ -36,7 +36,6 @@ export const ColorMode: React.FC<ColorModeProps> = ({
   // localStorage event handling
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {
-      console.log(e.key, 'keey')
       if (e.key !== STORAGE_KEY) {
         return
       }
@@ -51,7 +50,6 @@ export const ColorMode: React.FC<ColorModeProps> = ({
   }, [setModeState])
 
   const applyMode = useCallback((nextMode: string) => {
-    console.log(nextMode, 'mode')
     document.documentElement.className = nextMode
   }, [])
 

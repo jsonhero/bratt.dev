@@ -46,9 +46,13 @@ export default function RootLayout({
         <ColorModeScript attribute='data-color-mode' />
       </head>
       <body className={clsx(inter.className, "gradient-container  bg-primary text-primary transition-colors")}>
-        <header className="sticky">
+        <header className="sticky top-0 z-20 bg-tertiary">
           <div className="py-4 max-w-3xl flex justify-between m-auto">
-            <h1 className="font-bold">bratt.dev</h1>
+            <Link href="/">
+              <h1 className="font-bold">
+                bratt.dev
+              </h1>
+            </Link>
             <nav>
               <ul className="flex list-none p-0 m-0 gap-6">
                 {navPages.map((page, i) => (

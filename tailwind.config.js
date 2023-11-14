@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: 'var(--sand-12)',
+        secondary: 'var(--sand-11)',
+      },
       textColor: {
         primary: 'var(--sand-12)',
         secondary: 'var(--sand-11)',
@@ -15,6 +19,7 @@ module.exports = {
       backgroundColor: {
         primary: "var(--sand-2)",
         secondary: "var(--sand-3)",
+        tertiary: "var(--sand-1)",
       },
     },
   },

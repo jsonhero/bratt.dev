@@ -9,7 +9,6 @@ export default async function Notion() {
     <div>
       <ul>
         {blogPages.results.map((blogPage) => {
-          console.log(blogPage, 'page')
           return (
             <li key={blogPage.id} className="flex gap-12 items-center py-3">
               <div className="text-secondary">

@@ -1,5 +1,9 @@
 @import "@radix-ui/colors/sand.css";
 @import "@radix-ui/colors/sand-dark.css";
+@import "@radix-ui/colors/bronze.css";
+@import "@radix-ui/colors/bronze-dark.css";
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/slate-dark.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
