@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { Button } from '@/components/ui/button'
+import { NavLink } from '@/components/ui/nav-link'
+
 import { clsx } from 'clsx';
 
 import { ColorMode } from './color-mode'
@@ -41,29 +43,27 @@ export default function RootLayout({
       <head>
         <ColorModeScript attribute='data-color-mode' />
       </head>
-      <body className={clsx(inter.className, "gradient-container  bg-primary text-primary transition-colors duration-500")}>
-        <header className="sticky top-0 z-20 bg-tertiary">
-          <div className="py-4 max-w-3xl flex justify-between m-auto">
-            <Link href="/">
+      <body className={clsx(inter.className, "gradient-container bg-primary text-primary")}>
+        <header className="sticky top-0 z-20 bg-primaryD">
+          <div className="max-w-3xl flex justify-between m-auto items-center px-6 py-4">
+            <Link href="/" className="sm:inline hidden" >
               <h1 className="font-bold">
                 bratt.dev
               </h1>
             </Link>
             <nav>
-              <ul className="flex list-none p-0 m-0 gap-6">
+              <ul className="flex list-none p-0 m-0 gap-3">
                 {navPages.map((page, i) => (
                   <li key={i}>
-                    <Link href={page.href} className="py-1 px-2">{page.title}</Link>
+                    <NavLink href={page.href}>{page.title}</NavLink>
                   </li>
                 ))}
               </ul>
             </nav>
-            <div>
-             <ColorMode attribute='data-color-mode' />
-            </div>
+            <ColorMode attribute='data-color-mode' />
           </div>
         </header>
-        <main className="max-w-3xl mx-auto pt-16">{children}</main>
+        <main className="max-w-3xl mx-auto pt-16 px-6">{children}</main>
       </body>
     </html>
   )

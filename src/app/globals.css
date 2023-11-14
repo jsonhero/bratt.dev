@@ -7,3 +7,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.prose {
+  --tw-prose-body: var(--sand-12);
+  --tw-prose-bold: var(--sand-12);
+  --tw-prose-links: var(--sand-12);
+  --tw-prose-headings: var(--sand-12);
+  --tw-prose-code: var(--sand-12);
+  --tw-prose-quotes: var(--sand-11);
+}

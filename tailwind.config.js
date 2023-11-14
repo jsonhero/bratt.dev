@@ -17,9 +17,10 @@ module.exports = {
         secondary: 'var(--sand-11)',
       },
       backgroundColor: {
+        primaryD: "var(--sand-1)",
         primary: "var(--sand-2)",
         secondary: "var(--sand-3)",
-        tertiary: "var(--sand-1)",
+        tertiary: "var(--sand-4)",
       },
     },
   },

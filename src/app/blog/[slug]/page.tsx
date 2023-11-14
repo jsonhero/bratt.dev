@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </p>
       </div>
       <div className="h-8" />
-      <div className="prose dark:prose-invert prose-h2:text-lg prose-h2:mb-2 prose-h2:font-semibold">
+      <div className="prose prose-h2:text-lg prose-h2:mb-2 prose-h2:font-semibold">
         <MDXRemote source={blog.parent} />
         <NotionPrism />
       </div>

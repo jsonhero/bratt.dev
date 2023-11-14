@@ -26,7 +26,6 @@ export default function Home() {
         <p>
           {`I'm Jason, a full-stack software engineer. This is my personal website.`}
         </p>
-
         <div className="mt-6">
           <ul className="flex list-none p-0 m-0 gap-6">
             {socials.map((social, i) => (
