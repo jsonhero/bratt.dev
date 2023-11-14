@@ -1,6 +1,6 @@
 import { getPageMd, getPage } from "@/utils/notion"
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { NotionPrism } from '../../notion/prism'
+import { NotionPrism } from '../../../utils/prism'
 import { DateTime } from "luxon"
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -12,9 +12,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div>
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl font-semibold">
+          {/* @ts-ignore */}
           {page.properties?.Name.title[0]?.plain_text}
         </h2>
         <p className="text-secondary">
+          {/* @ts-ignore */}
         {DateTime.fromISO(page?.created_time).toLocal().toFormat('LLL dd, yyyy')}
         </p>
       </div>

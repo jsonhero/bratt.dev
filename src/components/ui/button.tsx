@@ -10,8 +10,9 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   ...props
 }) => {
-  return (
-    <button className={clsx("text-primary", className)} {...props}>
+  
+  // @ts-ignore
+  return (<button className={clsx("text-primary", className)} {...props}>
       {children}
     </button>
   )

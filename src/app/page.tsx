@@ -14,7 +14,8 @@ const socials = [
     href: '/resume.pdf'
   }
 ]
-export default function Home({ children }: { children: React.ReactNode }) {
+
+export default function Home() {
   return (
     <div>
       <div className="border rounded-full overflow-hidden w-[160px] h-[160px] border-primary">
@@ -23,7 +24,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
       <div className="h-7"></div>
       <div>
         <p>
-          I'm Jason, a full-stack software engineer. This is my personal website.
+          {`I'm Jason, a full-stack software engineer. This is my personal website.`}
         </p>
 
         <div className="mt-6">

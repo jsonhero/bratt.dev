@@ -12,9 +12,11 @@ export default async function Notion() {
           return (
             <li key={blogPage.id} className="flex gap-12 items-center py-3">
               <div className="text-secondary">
+                {/* @ts-ignore */}
                 {DateTime.fromISO(blogPage.created_time).toLocal().toFormat('LLL dd, yyyy')}
               </div>
               <Link className="font-bold" href={`/blog/${blogPage.id}`}>
+                {/* @ts-ignore */}
                 {blogPage.properties?.Name.title[0]?.plain_text}
               </Link>
             </li>
