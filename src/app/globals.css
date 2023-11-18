@@ -4,6 +4,8 @@
 @import "@radix-ui/colors/bronze-dark.css";
 @import "@radix-ui/colors/slate.css";
 @import "@radix-ui/colors/slate-dark.css";
+@import "@radix-ui/colors/jade.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
